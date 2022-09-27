@@ -1,0 +1,48 @@
+$color-blue: #03094f;
+$color-white: #FFFF;
+$color-gold: #d98d0b;
+$color-black: black;
+$color-red: #D12727;
+$color-grey-light: #F8F7F7;
+$color-icon: #B2955A;
+$color-grey: #666666;
+$color-white-light: #e5e5e5;
+
+
+html {
+  @include generate-color-variants(--c-promulias-primary, #B59855);
+  @include assign-color-variants (--c-primary, --c-promulias-primary);
+  @include generate-color-variants(--c-promulias-secondary, #B59855);
+  @include assign-color-variants (--c-secondary, --c-promulias-secondary);
+  @include assign-color-variants (--c-primary-variant, --c-promulias-primary-secondary);
+  --font-family--primary: 'FuturaLight', serif;
+  --font-family--secondary: 'Futura', serif;
+  --font-family--bold: 'Futura Bold', serif;
+}
+
+@font-face {
+  font-family: "FuturaLight";
+  src: url("@/assets/font/Futura/FuturaLT-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("@/assets/font/Futura/FuturaLT.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Futura Bold";
+  src: url("@/assets/font/Futura/FuturaLT-Bold.woff") format("woff");
+}
+
+.sf-button--pure {
+  border-radius: 0;
+}
+
+.is-active .sf-checkbox__checkmark{
+  background: $color-blue !important;
+  border: solid 1px $color-blue !important
+}
+.sf-input__label{
+  color: black;
+}
